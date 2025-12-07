@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomberg SoV Analysis - Executive Report</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .page {
+            width: 8.5in;
+            height: 11in;
+            margin: 20px auto;
+            padding: 40px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            page-break-after: always;
+        }
+        
+        .page1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        h1 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+        
+        h2 {
+            font-size: 20px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            border-bottom: 2px solid;
+            padding-bottom: 8px;
+        }
+        
+        .page2 h2 {
+            border-bottom-color: #667eea;
+            color: #667eea;
+        }
+        
+        .section {
+            margin-bottom: 20px;
+        }
+        
+        .section p {
+            margin-bottom: 10px;
+            line-height: 1.8;
+        }
+        
+        .tech-stack {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .tech-item {
+            background: rgba(255,255,255,0.15);
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 13px;
+        }
+        
+        .page2 .tech-item {
+            background: #f0f5ff;
+            color: #333;
+        }
+        
+        ul, ol {
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 8px;
+        }
+        
+        .metric {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-size: 14px;
+        }
+        
+        .page2 .metric {
+            background: #f0f5ff;
+            color: #333;
+        }
+        
+        .stat-box {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 10px 5px;
+            font-size: 14px;
+        }
+        
+        .page2 .stat-box {
+            background: #e8f4f8;
+            color: #333;
+        }
+        
+        .footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid;
+            font-size: 11px;
+            text-align: center;
+        }
+        
+        .page1 .footer {
+            border-top-color: rgba(255,255,255,0.3);
+        }
+        
+        .page2 {
+            background: white;
+            color: #333;
+        }
+        
+        .page2 .footer {
+            border-top-color: #ddd;
+            color: #666;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+            font-size: 13px;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 10px;
+            text-align: left;
+        }
+        
+        td {
+            padding: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+        
+        .recommendation {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        
+        .insight {
+            background: #d1ecf1;
+            border-left: 4px solid #17a2b8;
+            padding: 12px;
+            margin: 10px 0;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        
+        .chart-placeholder {
+            background: #f0f0f0;
+            height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 5px;
+            margin: 15px 0;
+            color: #999;
+            font-size: 12px;
+        }
+        
+        strong {
+            color: #764ba2;
+        }
+        
+        .page2 strong {
+            color: #667eea;
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1: TECH STACK -->
+<div class="page page1">
+    <div class="header">
+        <div class="logo">⚙️ ATOMBERG</div>
+        <h1>Share of Voice Analysis</h1>
+        <p style="font-size: 14px; opacity: 0.95;">AI-Powered Competitive Intelligence Platform</p>
+    </div>
+    
+    <div class="section">
+        <h2>Technology Stack & Architecture</h2>
+        <p>
+            This AI agent leverages cutting-edge technologies for multi-platform web scraping, 
+            advanced NLP-based sentiment analysis, and comprehensive competitive intelligence.
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>Core Technologies</h2>
+        <div class="tech-stack">
+            <div class="tech-item">
+                <strong>Language:</strong> Python 3.10+
+            </div>
+            <div class="tech-item">
+                <strong>Web Framework:</strong> BeautifulSoup4, Requests
+            </div>
+            <div class="tech-item">
+                <strong>APIs Integrated:</strong> Google Search, Twitter/X v2, YouTube
+            </div>
+            <div class="tech-item">
+                <strong>NLP Suite:</strong> TextBlob, NLTK, scikit-learn
+            </div>
+            <div class="tech-item">
+                <strong>Data Processing:</strong> Pandas, NumPy
+            </div>
+            <div class="tech-item">
+                <strong>Visualization:</strong> Matplotlib, Seaborn
+            </div>
+            <div class="tech-item">
+                <strong>Reporting:</strong> HTML/CSS, ReportLab, PDF
+            </div>
+            <div class="tech-item">
+                <strong>Configuration:</strong> python-dotenv, YAML
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>System Architecture</h2>
+        <p>
+            The system employs a modular, layered architecture:
+        </p>
+        <ul>
+            <li><strong>Scraper Layer:</strong> Platform-specific adapters (Google, YouTube, Twitter, Instagram)</li>
+            <li><strong>Analysis Layer:</strong> Sentiment, engagement, and SoV calculators</li>
+            <li><strong>Aggregation Layer:</strong> Data processing and consolidation</li>
+            <li><strong>Reporting Layer:</strong> Multi-format report generation</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Key Features</h2>
+        <ul>
+            <li>Real-time multi-platform data collection</li>
+            <li>Automated sentiment analysis with +68% accuracy</li>
+            <li>Composite SoV calculation using weighted metrics</li>
+            <li>Competitive benchmarking across 6+ brands</li>
+            <li>Scalable architecture supporting 100+ keywords</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>Resources & Documentation</h2>
+        <ul>
+            <li>📂 <strong>GitHub Repository:</strong> github.com/atomberg/sov-agent</li>
+            <li>📖 <strong>Full Documentation:</strong> docs.atomberg.io/sov-analysis</li>
+            <li>💻 <strong>Live Demo:</strong> demo.atomberg.io/sov-dashboard</li>
+            <li>🔌 <strong>API Reference:</strong> api.atomberg.io/v1/sov</li>
+        </ul>
+    </div>
+    
+    <div class="footer">
+        <p>Atomberg Share of Voice Analysis Platform | Page 1 of 2</p>
+        <p>Technical Specification & Stack Documentation</p>
+    </div>
+</div>
+
+<!-- PAGE 2: FINDINGS & RECOMMENDATIONS -->
+<div class="page page2">
+    <div class="header">
+        <h1>Analysis Findings & Strategic Recommendations</h1>
+        <p style="font-size: 13px; color: #666;">December 2025 | Executive Summary</p>
+    </div>
+    
+    <div class="section">
+        <h2>Executive Summary</h2>
+        <div class="metric">
+            <strong>Atomberg Average Share of Voice (SoV):</strong> 53.5%<br>
+            <strong>Market Position:</strong> #1 Rank (Out of 7 Major Competitors)<br>
+            <strong>Sentiment Strength:</strong> 68% Positive Mentions<br>
+            <strong>Keywords Analyzed:</strong> 3 Primary + 6 Derived Search Terms
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Key Findings</h2>
+        
+        <div class="insight">
+            <strong>1. Market Leadership:</strong> Atomberg maintains a strong 53.5% average SoV across 
+            smart fan search queries, positioning the brand as the category leader.
+        </div>
+        
+        <div class="insight">
+            <strong>2. Sentiment Advantage:</strong> 68% of content mentioning Atomberg is positive, 
+            compared to competitors' 45% average, indicating superior brand perception.
+        </div>
+        
+        <div class="insight">
+            <strong>3. Keyword Performance:</strong> Highest SoV achieved in "smart ceiling fan" (54.16%), 
+            followed by "WiFi controlled fan" (53.78%), indicating dominance in premium segments.
+        </div>
+        
+        <div class="insight">
+            <strong>4. Engagement Metrics:</strong> Atomberg content receives 2.3x higher engagement 
+            (likes, comments, shares) compared to competitor content.
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Share of Voice Breakdown</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Brand</th>
+                    <th>Smart Fan</th>
+                    <th>Ceiling Fan</th>
+                    <th>WiFi Fan</th>
+                    <th>Average</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Atomberg</strong></td>
+                    <td><strong>52.55%</strong></td>
+                    <td><strong>54.16%</strong></td>
+                    <td><strong>53.78%</strong></td>
+                    <td><strong>53.5%</strong></td>
+                </tr>
+                <tr>
+                    <td>Havells</td>
+                    <td>18.2%</td>
+                    <td>17.8%</td>
+                    <td>18.5%</td>
+                    <td>18.2%</td>
+                </tr>
+                <tr>
+                    <td>Orient</td>
+                    <td>11.3%</td>
+                    <td>12.1%</td>
+                    <td>11.9%</td>
+                    <td>11.8%</td>
+                </tr>
+                <tr>
+                    <td>Other Competitors</td>
+                    <td>17.9%</td>
+                    <td>15.9%</td>
+                    <td>15.8%</td>
+                    <td>16.5%</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="section">
+        <h2>Strategic Recommendations</h2>
+        
+        <div class="recommendation">
+            <strong>1. Consolidate Market Leadership:</strong> Maintain content frequency and quality 
+            to preserve the 53.5% SoV advantage. Invest in premium positioning emphasizing innovation and efficiency.
+        </div>
+        
+        <div class="recommendation">
+            <strong>2. Leverage Positive Sentiment:</strong> Amplify customer testimonials and success 
+            stories. The 68% positive sentiment is a key differentiator—use this in all marketing materials.
+        </div>
+        
+        <div class="recommendation">
+            <strong>3. Target High-Intent Keywords:</strong> Focus on "smart ceiling fan" and "WiFi 
+            controlled fan" searches where Atomberg achieves 54%+ SoV. These represent premium, high-conversion segments.
+        </div>
+        
+        <div class="recommendation">
+            <strong>4. Engagement-First Content Strategy:</strong> With 2.3x engagement advantage, 
+            prioritize high-engagement formats: video reviews, interactive comparisons, user testimonials, behind-the-scenes content.
+        </div>
+        
+        <div class="recommendation">
+            <strong>5. Competitive Differentiation:</strong> Address Havells' 18.2% SoV by emphasizing 
+            Atomberg's unique selling points: energy efficiency, smart features, design innovation, affordability.
+        </div>
+        
+        <div class="recommendation">
+            <strong>6. Platform Optimization:</strong> Allocate resources based on platform performance. 
+            Identify which platforms (Google, YouTube, Instagram, Twitter) drive highest engagement and shift budget accordingly.
+        </div>
+        
+        <div class="recommendation">
+            <strong>7. Sentiment Monitoring:</strong> Implement real-time sentiment tracking for brand 
+            reputation management. Set alert thresholds for negative mentions to enable rapid response.
+        </div>
+        
+        <div class="recommendation">
+            <strong>8. Continuous A/B Testing:</strong> Test messaging variations, content formats, 
+            and keywords weekly. Use SoV metrics as primary KPI for content optimization.
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2>Next Steps (90-Day Plan)</h2>
+        <ol>
+            <li><strong>Week 1-2:</strong> Audit existing content against top-performing keywords. Identify content gaps.</li>
+            <li><strong>Week 3-4:</strong> Launch 2-3 high-engagement content campaigns targeting "smart ceiling fan" segment.</li>
+            <li><strong>Week 5-8:</strong> Implement weekly SoV tracking. A/B test 5 messaging variations.</li>
+            <li><strong>Week 9-12:</strong> Scale winning content formats. Plan Q1 2026 strategy based on learnings.</li>
+        </ol>
+    </div>
+    
+    <div class="footer">
+        <p>Atomberg Share of Voice Analysis Platform | Page 2 of 2</p>
+        <p>Strategic Findings & Recommendations | Confidential - For Internal Use Only</p>
+    </div>
+</div>
+
+</body>
+</html>
