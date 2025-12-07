@@ -1,0 +1,677 @@
+{
+  "keyword_analyses": {
+    "smart fan": {
+      "keyword": "smart fan",
+      "timestamp": "2025-12-08T00:05:40.824568",
+      "raw_results_count": 15,
+      "raw_results": [
+        {
+          "id": "mock_1",
+          "title": "Smart Fan Installation Guide",
+          "snippet": "Step-by-step guide to installing and setting up your WiFi ceiling fan.",
+          "url": "https://example.com/result-1",
+          "position": 1,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 0,
+          "sentiment": "neutral",
+          "likes": 226,
+          "comments": 89,
+          "shares": 27,
+          "views": 8588
+        },
+        {
+          "id": "mock_2",
+          "title": "Why Atomberg is the Best Smart Fan in India",
+          "snippet": "Atomberg smart fans offer excellent value with automatic speed adjustment and mobile app control. Perfect for Indian climate.",
+          "url": "https://example.com/result-2",
+          "position": 2,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 3,
+          "sentiment": "positive",
+          "likes": 87,
+          "comments": 16,
+          "shares": 12,
+          "views": 5185
+        },
+        {
+          "id": "mock_3",
+          "title": "Atomberg Renesa Smart Ceiling Fan - WiFi Enabled",
+          "snippet": "Experience innovative cooling with Atomberg's WiFi-enabled ceiling fan. Energy efficient, smart control, and beautiful design.",
+          "url": "https://example.com/result-3",
+          "position": 3,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 2,
+          "sentiment": "positive",
+          "likes": 26,
+          "comments": 87,
+          "shares": 15,
+          "views": 5676
+        },
+        {
+          "id": "mock_4",
+          "title": "Ortem Smart Fan Technology",
+          "snippet": "Ortem smart fans are designed for modern homes with IoT integration.",
+          "url": "https://example.com/result-4",
+          "position": 4,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 134,
+          "comments": 64,
+          "shares": 44,
+          "views": 3236
+        },
+        {
+          "id": "mock_5",
+          "title": "Buy Atomberg Smart Ceiling Fan Online",
+          "snippet": "Shop Atomberg smart fans at best prices. Free installation, warranty, and customer support included.",
+          "url": "https://example.com/result-5",
+          "position": 5,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 350,
+          "comments": 47,
+          "shares": 49,
+          "views": 285
+        }
+      ],
+      "brand_analysis": {
+        "mentions": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        },
+        "total_results": 15,
+        "brand_results": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        }
+      },
+      "sentiment_analysis": {
+        "total_items": 15,
+        "positive_count": 6,
+        "negative_count": 0,
+        "neutral_count": 9,
+        "positive_percentage": 40.0,
+        "negative_percentage": 0.0,
+        "neutral_percentage": 60.0,
+        "avg_polarity": 0.0
+      },
+      "engagement_analysis": {
+        "total_items": 15,
+        "total_likes": 3439,
+        "total_comments": 877,
+        "total_shares": 419,
+        "total_views": 59545,
+        "total_engagement": 4735,
+        "avg_likes_per_item": 229.27,
+        "avg_engagement_per_item": 315.67
+      },
+      "sov_analysis": {
+        "mention_based": {
+          "atomberg": 42.86,
+          "competitors": {
+            "havells": 21.43,
+            "orient": 14.29,
+            "ortem": 7.14,
+            "agni": 7.14,
+            "carro": 0.0,
+            "luminous": 7.14
+          }
+        },
+        "engagement_based": {
+          "atomberg": 88.75,
+          "competitors": {
+            "havells": 1.87,
+            "orient": 1.87,
+            "ortem": 1.87,
+            "agni": 1.87,
+            "carro": 1.87,
+            "luminous": 1.87
+          }
+        },
+        "positive_voice": {
+          "positive_voice_percentage": {
+            "atomberg": 40.0,
+            "competitors": {
+              "havells": 25.0,
+              "orient": 25.0,
+              "ortem": 25.0,
+              "agni": 25.0,
+              "carro": 25.0,
+              "luminous": 25.0
+            }
+          },
+          "share_of_positive_voice": {
+            "atomberg": 3.85,
+            "competitors": {
+              "havells": 16.03,
+              "orient": 16.03,
+              "ortem": 16.03,
+              "agni": 16.03,
+              "carro": 16.03,
+              "luminous": 16.03
+            }
+          }
+        },
+        "composite_sov": {
+          "atomberg": 53.41,
+          "competitors": {
+            "luminous": 6.81,
+            "orient": 9.67,
+            "ortem": 6.81,
+            "havells": 12.53,
+            "agni": 6.81,
+            "carro": 3.95
+          }
+        },
+        "summary": {
+          "atomberg_sov": 53.41,
+          "rank": 1,
+          "total_brands": 7,
+          "top_competitor": [
+            "havells",
+            12.53
+          ],
+          "competitor_rankings": [
+            [
+              "havells",
+              12.53
+            ],
+            [
+              "orient",
+              9.67
+            ],
+            [
+              "luminous",
+              6.81
+            ],
+            [
+              "ortem",
+              6.81
+            ],
+            [
+              "agni",
+              6.81
+            ],
+            [
+              "carro",
+              3.95
+            ]
+          ],
+          "performance_gap": 40.88
+        }
+      }
+    },
+    "smart ceiling fan": {
+      "keyword": "smart ceiling fan",
+      "timestamp": "2025-12-08T00:05:40.825533",
+      "raw_results_count": 15,
+      "raw_results": [
+        {
+          "id": "mock_1",
+          "title": "Ortem Smart Fan Technology",
+          "snippet": "Ortem smart fans are designed for modern homes with IoT integration.",
+          "url": "https://example.com/result-1",
+          "position": 1,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 330,
+          "comments": 99,
+          "shares": 24,
+          "views": 1123
+        },
+        {
+          "id": "mock_2",
+          "title": "Havells SmartCool WiFi Ceiling Fan",
+          "snippet": "Havells brings premium quality smart fans with advanced features and reliable performance.",
+          "url": "https://example.com/result-2",
+          "position": 2,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 20,
+          "comments": 23,
+          "shares": 28,
+          "views": 4392
+        },
+        {
+          "id": "mock_3",
+          "title": "Atomberg vs Havells - Which Smart Fan is Better?",
+          "snippet": "Atomberg offers better design and more affordable pricing compared to Havells. Both have good smart features.",
+          "url": "https://example.com/result-3",
+          "position": 3,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 2,
+          "sentiment": "positive",
+          "likes": 32,
+          "comments": 59,
+          "shares": 38,
+          "views": 1509
+        },
+        {
+          "id": "mock_4",
+          "title": "Atomberg Renesa Smart Ceiling Fan - WiFi Enabled",
+          "snippet": "Experience innovative cooling with Atomberg's WiFi-enabled ceiling fan. Energy efficient, smart control, and beautiful design.",
+          "url": "https://example.com/result-4",
+          "position": 4,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 2,
+          "sentiment": "positive",
+          "likes": 199,
+          "comments": 24,
+          "shares": 8,
+          "views": 5505
+        },
+        {
+          "id": "mock_5",
+          "title": "Agni Smart Ceiling Fan - Affordable Option",
+          "snippet": "Agni provides budget-friendly smart fans for Indian households.",
+          "url": "https://example.com/result-5",
+          "position": 5,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 10,
+          "comments": 47,
+          "shares": 21,
+          "views": 3810
+        }
+      ],
+      "brand_analysis": {
+        "mentions": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        },
+        "total_results": 15,
+        "brand_results": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        }
+      },
+      "sentiment_analysis": {
+        "total_items": 15,
+        "positive_count": 6,
+        "negative_count": 0,
+        "neutral_count": 9,
+        "positive_percentage": 40.0,
+        "negative_percentage": 0.0,
+        "neutral_percentage": 60.0,
+        "avg_polarity": 0.0
+      },
+      "engagement_analysis": {
+        "total_items": 15,
+        "total_likes": 1948,
+        "total_comments": 803,
+        "total_shares": 427,
+        "total_views": 76638,
+        "total_engagement": 3178,
+        "avg_likes_per_item": 129.87,
+        "avg_engagement_per_item": 211.87
+      },
+      "sov_analysis": {
+        "mention_based": {
+          "atomberg": 42.86,
+          "competitors": {
+            "havells": 21.43,
+            "orient": 14.29,
+            "ortem": 7.14,
+            "agni": 7.14,
+            "carro": 0.0,
+            "luminous": 7.14
+          }
+        },
+        "engagement_based": {
+          "atomberg": 84.12,
+          "competitors": {
+            "havells": 2.65,
+            "orient": 2.65,
+            "ortem": 2.65,
+            "agni": 2.65,
+            "carro": 2.65,
+            "luminous": 2.65
+          }
+        },
+        "positive_voice": {
+          "positive_voice_percentage": {
+            "atomberg": 40.0,
+            "competitors": {
+              "havells": 25.0,
+              "orient": 25.0,
+              "ortem": 25.0,
+              "agni": 25.0,
+              "carro": 25.0,
+              "luminous": 25.0
+            }
+          },
+          "share_of_positive_voice": {
+            "atomberg": 3.85,
+            "competitors": {
+              "havells": 16.03,
+              "orient": 16.03,
+              "ortem": 16.03,
+              "agni": 16.03,
+              "carro": 16.03,
+              "luminous": 16.03
+            }
+          }
+        },
+        "composite_sov": {
+          "atomberg": 51.56,
+          "competitors": {
+            "luminous": 7.12,
+            "orient": 9.98,
+            "ortem": 7.12,
+            "havells": 12.84,
+            "agni": 7.12,
+            "carro": 4.27
+          }
+        },
+        "summary": {
+          "atomberg_sov": 51.56,
+          "rank": 1,
+          "total_brands": 7,
+          "top_competitor": [
+            "havells",
+            12.84
+          ],
+          "competitor_rankings": [
+            [
+              "havells",
+              12.84
+            ],
+            [
+              "orient",
+              9.98
+            ],
+            [
+              "luminous",
+              7.12
+            ],
+            [
+              "ortem",
+              7.12
+            ],
+            [
+              "agni",
+              7.12
+            ],
+            [
+              "carro",
+              4.27
+            ]
+          ],
+          "performance_gap": 38.72
+        }
+      }
+    },
+    "WiFi controlled fan": {
+      "keyword": "WiFi controlled fan",
+      "timestamp": "2025-12-08T00:05:40.826295",
+      "raw_results_count": 15,
+      "raw_results": [
+        {
+          "id": "mock_1",
+          "title": "Buy Atomberg Smart Ceiling Fan Online",
+          "snippet": "Shop Atomberg smart fans at best prices. Free installation, warranty, and customer support included.",
+          "url": "https://example.com/result-1",
+          "position": 1,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 359,
+          "comments": 5,
+          "shares": 25,
+          "views": 5340
+        },
+        {
+          "id": "mock_2",
+          "title": "How WiFi Ceiling Fans Save Energy",
+          "snippet": "Smart fans with WiFi control can reduce energy consumption by up to 50%. Learn how automatic speed adjustment works.",
+          "url": "https://example.com/result-2",
+          "position": 2,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "positive",
+          "likes": 328,
+          "comments": 78,
+          "shares": 19,
+          "views": 1401
+        },
+        {
+          "id": "mock_3",
+          "title": "Orient Electric Smart Fans - Latest Models",
+          "snippet": "Orient offers smart ceiling fans with energy efficiency and sleek designs.",
+          "url": "https://example.com/result-3",
+          "position": 3,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 195,
+          "comments": 3,
+          "shares": 32,
+          "views": 4058
+        },
+        {
+          "id": "mock_4",
+          "title": "Atomberg Renesa Smart Ceiling Fan - WiFi Enabled",
+          "snippet": "Experience innovative cooling with Atomberg's WiFi-enabled ceiling fan. Energy efficient, smart control, and beautiful design.",
+          "url": "https://example.com/result-4",
+          "position": 4,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 2,
+          "sentiment": "positive",
+          "likes": 44,
+          "comments": 62,
+          "shares": 18,
+          "views": 5920
+        },
+        {
+          "id": "mock_5",
+          "title": "IoT Ceiling Fans - Future of Home Cooling",
+          "snippet": "IoT-enabled ceiling fans are changing how we control home temperature and humidity.",
+          "url": "https://example.com/result-5",
+          "position": 5,
+          "platform": "Mock",
+          "source": "mock",
+          "mentions": 1,
+          "sentiment": "neutral",
+          "likes": 454,
+          "comments": 45,
+          "shares": 28,
+          "views": 3517
+        }
+      ],
+      "brand_analysis": {
+        "mentions": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        },
+        "total_results": 15,
+        "brand_results": {
+          "atomberg": 6,
+          "havells": 3,
+          "orient": 2,
+          "ortem": 1,
+          "agni": 1,
+          "carro": 0,
+          "luminous": 1
+        }
+      },
+      "sentiment_analysis": {
+        "total_items": 15,
+        "positive_count": 6,
+        "negative_count": 0,
+        "neutral_count": 9,
+        "positive_percentage": 40.0,
+        "negative_percentage": 0.0,
+        "neutral_percentage": 60.0,
+        "avg_polarity": 0.0
+      },
+      "engagement_analysis": {
+        "total_items": 15,
+        "total_likes": 4070,
+        "total_comments": 627,
+        "total_shares": 408,
+        "total_views": 68079,
+        "total_engagement": 5105,
+        "avg_likes_per_item": 271.33,
+        "avg_engagement_per_item": 340.33
+      },
+      "sov_analysis": {
+        "mention_based": {
+          "atomberg": 42.86,
+          "competitors": {
+            "havells": 21.43,
+            "orient": 14.29,
+            "ortem": 7.14,
+            "agni": 7.14,
+            "carro": 0.0,
+            "luminous": 7.14
+          }
+        },
+        "engagement_based": {
+          "atomberg": 89.48,
+          "competitors": {
+            "havells": 1.75,
+            "orient": 1.75,
+            "ortem": 1.75,
+            "agni": 1.75,
+            "carro": 1.75,
+            "luminous": 1.75
+          }
+        },
+        "positive_voice": {
+          "positive_voice_percentage": {
+            "atomberg": 40.0,
+            "competitors": {
+              "havells": 25.0,
+              "orient": 25.0,
+              "ortem": 25.0,
+              "agni": 25.0,
+              "carro": 25.0,
+              "luminous": 25.0
+            }
+          },
+          "share_of_positive_voice": {
+            "atomberg": 3.85,
+            "competitors": {
+              "havells": 16.03,
+              "orient": 16.03,
+              "ortem": 16.03,
+              "agni": 16.03,
+              "carro": 16.03,
+              "luminous": 16.03
+            }
+          }
+        },
+        "composite_sov": {
+          "atomberg": 53.71,
+          "competitors": {
+            "luminous": 6.76,
+            "orient": 9.62,
+            "ortem": 6.76,
+            "havells": 12.48,
+            "agni": 6.76,
+            "carro": 3.91
+          }
+        },
+        "summary": {
+          "atomberg_sov": 53.71,
+          "rank": 1,
+          "total_brands": 7,
+          "top_competitor": [
+            "havells",
+            12.48
+          ],
+          "competitor_rankings": [
+            [
+              "havells",
+              12.48
+            ],
+            [
+              "orient",
+              9.62
+            ],
+            [
+              "luminous",
+              6.76
+            ],
+            [
+              "ortem",
+              6.76
+            ],
+            [
+              "agni",
+              6.76
+            ],
+            [
+              "carro",
+              3.91
+            ]
+          ],
+          "performance_gap": 41.23
+        }
+      }
+    }
+  },
+  "aggregate_insights": {
+    "average_sov": 52.89,
+    "keywords_analyzed": 3,
+    "top_keywords": [
+      [
+        "WiFi controlled fan",
+        53.71
+      ],
+      [
+        "smart fan",
+        53.41
+      ],
+      [
+        "smart ceiling fan",
+        51.56
+      ]
+    ]
+  },
+  "timestamp": "2025-12-08T00:05:40.826556"
+}

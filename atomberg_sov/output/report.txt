@@ -1,0 +1,63 @@
+================================================================================
+ATOMBERG SHARE OF VOICE ANALYSIS REPORT
+================================================================================
+
+Report Generated: 2025-12-08 00:05:40
+
+EXECUTIVE SUMMARY
+----------------------------------------
+
+================================================================================
+
+METHODOLOGY
+----------------------------------------
+
+Share of Voice (SoV) is calculated using a composite approach:
+
+1. **Mention-Based SoV**: Percentage of brand mentions in search results
+2. **Engagement-Based SoV**: Share of total engagement (likes, comments, shares)
+3. **Positive Voice SoV**: Share of positive sentiment mentions
+
+Final SoV Score = (0.4 × Mention SoV) + (0.4 × Engagement SoV) + (0.2 × Positive Voice SoV)
+
+Platforms Analyzed: Google Search, YouTube, Twitter/X, Instagram
+
+================================================================================
+
+KEY FINDINGS
+----------------------------------------
+
+Share of Voice Breakdown:
+
+================================================================================
+
+RECOMMENDATIONS TO ATOMBERG TEAM
+----------------------------------------
+
+1. Content Strategy
+   - Focus on high-engagement content formats that resonate with target audience
+   - Leverage platforms with highest Atomberg mention rates
+   - Create comparative content highlighting unique features
+
+2. Engagement Enhancement
+   - Increase posting frequency on platforms with high engagement potential
+   - Implement community engagement strategy for comment sections
+   - Use trending hashtags and keywords related to smart fans
+
+3. Sentiment Management
+   - Monitor and respond to negative mentions promptly
+   - Amplify positive customer testimonials and reviews
+   - Address common pain points mentioned in negative content
+
+4. Competitive Analysis
+   - Track competitor activity across platforms
+   - Identify gaps in competitor messaging
+   - Capitalize on market opportunities
+
+5. Measurement & Optimization
+   - Track SoV metrics weekly
+   - A/B test content and messaging
+   - Refine strategy based on engagement patterns
+
+================================================================================
+

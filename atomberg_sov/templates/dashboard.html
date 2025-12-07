@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomberg Share of Voice - AI Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div class="logo-section">
+                    <h1>🚀 Atomberg SoV Agent</h1>
+                    <p class="subtitle">Share of Voice Intelligence Platform</p>
+                </div>
+                <div class="status-indicator">
+                    <span id="status" class="status-dot"></span>
+                    <span id="status-text">Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Panel with User Input -->
+        <section class="control-panel">
+            <div class="control-content">
+                <h2>� Search & Analysis</h2>
+                
+                <!-- User Input Form -->
+                <div class="user-input-form">
+                    <div class="form-grid">
+                        <!-- Keywords Input -->
+                        <div class="form-group">
+                            <label for="keywordsInput">Keywords to Analyze</label>
+                            <input 
+                                type="text" 
+                                id="keywordsInput" 
+                                class="form-input"
+                                placeholder="e.g., smart fan, wireless fan, ceiling fan"
+                                value="smart fan, smart ceiling fan, WiFi controlled fan"
+                            >
+                            <small class="form-hint">Separate multiple keywords with commas</small>
+                        </div>
+
+                        <!-- Results Count -->
+                        <div class="form-group">
+                            <label for="resultsCount">Results Per Keyword</label>
+                            <input 
+                                type="number" 
+                                id="resultsCount" 
+                                class="form-input"
+                                min="1" 
+                                max="50"
+                                value="10"
+                            >
+                            <small class="form-hint">1-50 results</small>
+                        </div>
+
+                        <!-- Analysis Type -->
+                        <div class="form-group">
+                            <label for="analysisType">Analysis Type</label>
+                            <select id="analysisType" class="form-input">
+                                <option value="full">Full Analysis</option>
+                                <option value="sov">SoV Only</option>
+                                <option value="sentiment">Sentiment Only</option>
+                                <option value="engagement">Engagement Only</option>
+                                <option value="competitor">Competitor Only</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Form Buttons -->
+                    <div class="form-buttons">
+                        <button id="analyzeBtn" class="btn btn-primary" onclick="performSearch()">
+                            <span class="btn-icon">🔎</span>
+                            Search & Analyze
+                        </button>
+                        <button id="clearBtn" class="btn btn-secondary" onclick="clearForm()">
+                            <span class="btn-icon">✕</span>
+                            Clear
+                        </button>
+                        <button id="historyBtn" class="btn btn-secondary" onclick="showHistory()">
+                            <span class="btn-icon">�</span>
+                            Search History
+                        </button>
+                    </div>
+
+                    <!-- Status Message -->
+                    <div class="analysis-status">
+                        <span id="analysisStatus" class="status-text"></span>
+                        <div id="progressBar" class="progress-bar" style="display: none;">
+                            <div id="progressFill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Export Options -->
+                <div class="export-section">
+                    <h3>📥 Export Results</h3>
+                    <div class="export-buttons">
+                        <button id="exportJsonBtn" class="btn btn-small" onclick="exportJSON()" disabled>
+                            <span class="btn-icon">📄</span>
+                            JSON
+                        </button>
+                        <button id="exportCsvBtn" class="btn btn-small" onclick="exportCSV()" disabled>
+                            <span class="btn-icon">📊</span>
+                            CSV
+                        </button>
+                        <button id="printBtn" class="btn btn-small" onclick="printReport()" disabled>
+                            <span class="btn-icon">🖨️</span>
+                            Print
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard">
+            <!-- KPI Cards -->
+            <section class="kpi-section">
+                <h2>📈 Key Metrics</h2>
+                <div class="kpi-grid">
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3>Atomberg SoV</h3>
+                            <span class="kpi-icon">🎯</span>
+                        </div>
+                        <div class="kpi-value" id="sovValue">--</div>
+                        <p class="kpi-label">Share of Voice %</p>
+                        <div class="kpi-bar">
+                            <div class="kpi-progress" id="sovProgress" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3>Market Rank</h3>
+                            <span class="kpi-icon">🏆</span>
+                        </div>
+                        <div class="kpi-value" id="rankValue">--</div>
+                        <p class="kpi-label">Position in Market</p>
+                        <div class="kpi-badge" id="rankBadge"></div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3>Sentiment</h3>
+                            <span class="kpi-icon">😊</span>
+                        </div>
+                        <div class="kpi-value" id="sentimentValue">--</div>
+                        <p class="kpi-label">Positive %</p>
+                        <div class="kpi-bar">
+                            <div class="kpi-progress positive" id="sentimentProgress" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <div class="kpi-card">
+                        <div class="kpi-header">
+                            <h3>Keywords</h3>
+                            <span class="kpi-icon">🔑</span>
+                        </div>
+                        <div class="kpi-value" id="keywordsValue">--</div>
+                        <p class="kpi-label">Analyzed</p>
+                        <div class="kpi-bar">
+                            <div class="kpi-progress" id="keywordsProgress" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Charts Section -->
+            <section class="charts-section">
+                <h2>📊 Analysis Charts</h2>
+                <div class="charts-grid">
+                    <!-- SoV Comparison -->
+                    <div class="chart-card">
+                        <h3>Share of Voice Comparison</h3>
+                        <canvas id="sovChart"></canvas>
+                    </div>
+
+                    <!-- Sentiment Distribution -->
+                    <div class="chart-card">
+                        <h3>Sentiment Distribution</h3>
+                        <canvas id="sentimentChart"></canvas>
+                    </div>
+
+                    <!-- Top Keywords -->
+                    <div class="chart-card">
+                        <h3>Top Keywords by SoV</h3>
+                        <canvas id="keywordsChart"></canvas>
+                    </div>
+
+                    <!-- Engagement Metrics -->
+                    <div class="chart-card">
+                        <h3>Engagement Metrics</h3>
+                        <canvas id="engagementChart"></canvas>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Detailed Tables -->
+            <section class="tables-section">
+                <h2>📋 Detailed Analysis</h2>
+                
+                <!-- SoV by Keyword -->
+                <div class="table-card">
+                    <h3>SoV Breakdown by Keyword</h3>
+                    <div class="table-wrapper">
+                        <table id="sovTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Keyword</th>
+                                    <th>Atomberg SoV</th>
+                                    <th>Rank</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sovTableBody">
+                                <tr><td colspan="4" style="text-align: center;">No data available</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Competitor Comparison -->
+                <div class="table-card">
+                    <h3>Competitor Share of Voice</h3>
+                    <div class="table-wrapper">
+                        <table id="competitorTable" class="data-table">
+                            <thead>
+                                <tr>
+                                    <th>Brand</th>
+                                    <th>SoV %</th>
+                                    <th>Comparison</th>
+                                    <th>Progress</th>
+                                </tr>
+                            </thead>
+                            <tbody id="competitorTableBody">
+                                <tr><td colspan="4" style="text-align: center;">No data available</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recommendations -->
+            <section class="recommendations-section">
+                <h2>💡 Strategic Recommendations</h2>
+                <div class="recommendations-grid">
+                    <div class="recommendation-card">
+                        <div class="rec-number">1</div>
+                        <h4>Consolidate Leadership</h4>
+                        <p>Maintain content frequency to preserve 50%+ SoV advantage</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">2</div>
+                        <h4>Positive Sentiment</h4>
+                        <p>Amplify positive content - 68% sentiment advantage</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">3</div>
+                        <h4>Target Keywords</h4>
+                        <p>Focus on high-intent keywords with highest SoV</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">4</div>
+                        <h4>Engagement Drive</h4>
+                        <p>Create interactive, high-engagement content</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">5</div>
+                        <h4>Differentiation</h4>
+                        <p>Highlight unique features vs competitors</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">6</div>
+                        <h4>Platform Mix</h4>
+                        <p>Optimize by platform performance</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">7</div>
+                        <h4>Monitoring</h4>
+                        <p>Real-time sentiment and brand reputation tracking</p>
+                    </div>
+                    <div class="recommendation-card">
+                        <div class="rec-number">8</div>
+                        <h4>A/B Testing</h4>
+                        <p>Weekly optimization using SoV metrics</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Last Update -->
+            <section class="footer-section">
+                <div class="footer-content">
+                    <div class="footer-info">
+                        <p>Last Update: <span id="lastUpdate">Never</span></p>
+                        <p>Data Refresh: <button onclick="location.reload()" class="link-btn">🔄 Refresh Page</button></p>
+                    </div>
+                    <div class="footer-attribution">
+                        <p>🚀 <strong>Atomberg Share of Voice AI Agent</strong></p>
+                        <p>Developed by <strong>Varun Kadadi</strong></p>
+                        <p class="footer-date" id="currentYear">© 2025 - All Rights Reserved</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay" style="display: none;">
+        <div class="spinner"></div>
+        <p>Running analysis... This may take a moment.</p>
+    </div>
+
+    <script src="{{ url_for('static', filename='dashboard.js') }}"></script>
+    <script src="{{ url_for('static', filename='agent.js') }}"></script>
+</body>
+</html>
